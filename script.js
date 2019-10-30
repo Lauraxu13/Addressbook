@@ -55,29 +55,6 @@ function print(book) {
   }
 }
 
-// // find name using Array Find
-// function findName(desiredName) {
-//   function findHumanName(person) {
-//     return person.name === desiredName;
-//   }
-//   console.log(book.contacts.find(findHumanName));
-// }
-
-// // filter name using Array filter
-
-// function filterRelations(bookReference,relation) {
-//   const results =bookReference.contacts.filter(contact=> contact.relation === relation);
-// console.log(result)
-// }
-
-// function display(book) {
-//   document.querySelector("#contacts").innerHTML = "";
-//   for (const contact of book.contacts) {
-//     const div = document.createElement("div");
-//     div.classList.add("contact");
-//     const name = dc;
-//   }
-// }
 const book = new Addressbook();
 book.add("Laura", "laura@gmail.com", "1235", "self");
 book.add("Ray", "ray@gmail.com", "1235", "friend");
@@ -88,6 +65,7 @@ book.add("teresa", "teresa@gmail.com", "1235", "friend");
 book.add("lauren", "lauren@gmail.com", "1235", "friend");
 book.deletAt(2);
 
+//creates display for contacts under the form
 function display() {
   document.querySelector("#contacts").innerHTML = "";
   book.contacts.forEach((contact, index) => {
@@ -107,6 +85,7 @@ function display() {
 display();
 
 // #book is the id of my form
+//adds new contact from form into the book
 const form = document.querySelector("#book");
 form.addEventListener("submit", addContact);
 function addContact(e) {
@@ -124,9 +103,10 @@ function addContact(e) {
 }
 
 document
-  .querySelector("#contacts")
-  .addEventListener("click", deletContacts);
+.querySelector("#contacts")
+.addEventListener("click", deletContacts);
 
+//delets the contact with a push of button
 function deletContacts(e) {
   if (e.target.classList.contains("fa-trash")) {
     const index = e.target.getAttribute("data-index-number");
