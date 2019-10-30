@@ -1,15 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Java Lab 3</title>
-</head>
-<body>
-    <h1>Java Lab 3</h1>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Maven+Pro&display=swap"
+      rel="stylesheet"
+    />
 
+    <title>Java Lab 3</title>
+  </head>
+  <body>
+    <form id="book">
+      <h1>My Contacts</h1>
+      <label class="name">Name <input name="name"/></label>
+      <label class="email">Email <input name="email"/></label>
+      <label class="phone">Phone <input name="phone"/></label>
+      <label class="relations"
+        >Relation
+        <select name="relations">
+          <option value="none"></option>
+          <option value="Family">Family</option>
+          <option value="Friend">Friend</option>
+          <option value="Professional">Professional</option>
+        </select>
+      </label>
+
+      <button class="submit">Add</button>
+    </form>
+    <section id="contacts"></section>
     <script src="script.js"></script>
-    
-</body>
+    <script
+      src="https://kit.fontawesome.com/8ebf573fa1.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>
